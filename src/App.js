@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 
 
-const History = (props) => {
-  if (props.allClicks.length === 0 ) {
+const History = ({ allClicks }) => {
+  // this component renders different React elements,
+  // depending on the state of the application. (conditional rendering)
+  if (allClicks.length === 0 ) {
     return (
       <div>this app is used by pressing buttons</div>
     )
   }
   return (
-    <div>button press history: {props.allClicks.join(' ')}</div>
+    <div>button press history: {allClicks.join(' ')}</div>
   )
 }
 
